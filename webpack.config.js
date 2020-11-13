@@ -30,14 +30,24 @@ module.exports = {
 
   module: {
     rules: [
+      // {
+      //   test: /\.js$/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: [
+      //         '@babel/preset-env'
+      //       ]
+      //     }
+      //   }
+      // }
       {
         test: /\.js$/,
         use: {
-          loader: 'babel-loader',
+          loader: 'banner-loader',
           options: {
-            presets: [
-              '@babel/preset-env'
-            ]
+            text: 'write by zz',
+            filename: path.resolve(__dirname, 'banner-text.txt')
           }
         }
       }
