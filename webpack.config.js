@@ -30,17 +30,17 @@ module.exports = {
 
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: [
-      //         '@babel/preset-env'
-      //       ]
-      //     }
-      //   }
-      // }
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env'
+            ]
+          }
+        }
+      },
       {
         test: /\.js$/,
         use: {
@@ -50,6 +50,10 @@ module.exports = {
             filename: path.resolve(__dirname, 'banner-text.txt')
           }
         }
+      },
+      {
+        test: /\.png$/,
+        use: 'file-loader' // 目的是根据图片生成一个md5 发射到dist目录下，file-loader还会返回当前图片路径
       }
     ]
   }

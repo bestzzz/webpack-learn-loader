@@ -1,4 +1,4 @@
-console.log('111');
+require('./image');
 
 class F {
   constructor() {
