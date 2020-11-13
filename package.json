@@ -1,0 +1,12 @@
+{
+  "name": "webpack-learn-loader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bestzzz/webpack-learn-loader.git",
+  "author": "左钊 <zuozhao@mmears.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
