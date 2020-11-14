@@ -1,4 +1,5 @@
 require('./image');
+require('./index.less');
 
 class F {
   constructor() {
