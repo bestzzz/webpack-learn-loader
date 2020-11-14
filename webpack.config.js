@@ -53,7 +53,15 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        use: 'file-loader' // 目的是根据图片生成一个md5 发射到dist目录下，file-loader还会返回当前图片路径
+        // 目的是根据图片生成一个md5 发射到dist目录下，file-loader还会返回当前图片路径
+        // use: 'file-loader',
+        // url-loader
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 200*1024
+          }
+        }
       }
     ]
   }

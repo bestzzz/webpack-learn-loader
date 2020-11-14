@@ -1,6 +1,6 @@
-// import p from './referral-enrty.png';
-const p = require('./referral-enrty.png');
+// import p from './referral-entry.png'
+const p = require('./referral-entry.png');
 
 const img = document.createElement('img');
 img.src = p;
-document.appendChild(img);
+document.body.appendChild(img);
