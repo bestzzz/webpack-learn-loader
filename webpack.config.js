@@ -1,5 +1,8 @@
 const path = require('path');
 
+const DonePlugin = require('./plugins/DonePlugin');
+const FileListPlugin = require('./plugins/FileListPlugin');
+
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
@@ -68,5 +71,12 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'less-loader']
       }
     ]
-  }
+  },
+
+  plugins: [
+    new DonePlugin(),
+    new FileListPlugin({
+      filename: 'readme.md'
+    })
+  ]
 };
